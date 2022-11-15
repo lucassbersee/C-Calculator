@@ -1,0 +1,44 @@
+using System;
+
+namespace PROJECT NAME
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string operation; //variable -> math operation (+, -, *, /)
+            int resp = 0; //variable -> set result = 0
+
+
+            Console.WriteLine("Primeiro valor:"); //ask what the first value
+            int n1 = int.Parse(Console.ReadLine()); //save the answer in a variable
+
+            Console.WriteLine("Operação (+, -, *, /:):"); //ask what the operation
+            operation = Console.ReadLine(); ////save the answer in a variable
+
+            Console.WriteLine("Segundo valor:"); //ask what the second value
+            int n2 = int.Parse(Console.ReadLine()); //save the answer in a variable
+
+            switch (operation)
+            {
+                case "+":                               //if you type "+":
+                    resp = n1 + n2;                     //the value of "resp" (result) will be n1 + n2
+                    break;
+
+                case "-":                               //if you type "-":
+                    resp = n1 - n2;                     //the value of "resp" (result) will be n1 - n2 
+                    break;
+
+                case "*":                               //if you type "*":                               
+                    resp = n1 * n2;                     //the value of "resp" (result) will be n1 * n2
+                    break;
+
+                case "/":                              //if you type "/":
+                    resp = n1 / n2;                    //the value of "resp" (result) will be n1 / n2
+                    break;
+            }
+
+            Console.WriteLine("{0} {1} {2} = {3}", n1, operation, n2, resp); //Console -> show {n1} {operation} {n2} = {resp}
+        }
+    }
+}
