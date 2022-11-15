@@ -1,0 +1,44 @@
+using System;
+
+namespace PROJECT NAME
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string operation;
+            int resp = 0;
+
+
+            Console.WriteLine("Primeiro valor:");
+            int n1 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Operação (+, -, *, /:):");
+            operation = Console.ReadLine();
+
+            Console.WriteLine("Segundo valor:");
+            int n2 = int.Parse(Console.ReadLine());
+
+            switch (operation)
+            {
+                case "+":
+                    resp = n1 + n2;
+                    break;
+
+                case "-":
+                    resp = n1 - n2;
+                    break;
+
+                case "*":
+                    resp = n1 * n2;
+                    break;
+
+                case "/":
+                    resp = n1 / n2;
+                    break;
+            }
+
+            Console.WriteLine("{0} {1} {2} = {3}", n1, operation, n2, resp);
+        }
+    }
+}
